@@ -43,7 +43,10 @@ public class cc {
     public static void insert(Trie r, String str) {
     Trie t = r;
     for (char c : str.toCharArray()) {
-        if (c < 'a' || c > 'z') continue; // ✅ skip non-lowercase letters
+        if (c < 'a' || c > 'z') 
+        {
+            continue; 
+        }
         int i = c - 'a';
         if (t.ch[i] == null) t.ch[i] = new Trie();
         t = t.ch[i];
